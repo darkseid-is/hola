@@ -23,8 +23,13 @@ jobs:
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
-          toolchain: stable nightly
+          toolchain: nightly
           components: rustfmt
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
 
       - name: Rustfmt Check
         run: cargo +nightly fmt --all --check
