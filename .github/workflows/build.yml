@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Clippy Check
-        run: cd hola && cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
+        run: ls -la && cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
 
   cargo-test:
     name: Cargo test
