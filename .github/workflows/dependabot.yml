@@ -1,6 +1,14 @@
 name: "Dependabot"
 version: 2
 
+on:
+  workflow_dispatch:
+  workflow_call:
+  pull_request:
+  push:
+    branches:
+      - main
+
 updates:
   - package-ecosystem: cargo
     directory: /
