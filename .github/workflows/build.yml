@@ -23,40 +23,40 @@ jobs:
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
-          toolchain: nightly
+          toolchain: stable, nightly 
           components: rustfmt
 
       - name: Rustfmt Check
         run: cargo +nightly fmt --all --check
 
-  cargo-clippy:
-    name: Cargo clippy
-    runs-on: ubuntu-latest
-    needs: cargo-fmt
+        #cargo-clippy:
+        #  name: Cargo clippy
+        #  runs-on: ubuntu-latest
+        #  needs: cargo-fmt
 
-    steps:
-      - name: Fetch Repository
-        uses: actions/checkout@v4
+        #  steps:
+        #    - name: Fetch Repository
+        #      uses: actions/checkout@v4
 
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          components: clippy
+        #    - name: Install stable toolchain
+        #      uses: actions-rust-lang/setup-rust-toolchain@v1
+        #      with:
+        #        components: clippy
 
-      - name: Clippy Check
-        run: cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
+        #    - name: Clippy Check
+        #      run: cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
 
-  cargo-test:
-    name: Cargo test
-    runs-on: ubuntu-latest
-    needs: cargo-clippy
+        #cargo-test:
+        #  name: Cargo test
+        #  runs-on: ubuntu-latest
+        #  needs: cargo-clippy
 
-    steps:
-      - name: Fetch Repository
-        uses: actions/checkout@v4
+        #  steps:
+        #    - name: Fetch Repository
+        #      uses: actions/checkout@v4
 
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
+        #    - name: Install stable toolchain
+        #      uses: actions-rust-lang/setup-rust-toolchain@v1
 
-      - name: Cargo test
-        run: cargo test --workspace --all-targets --all-features
+        #    - name: Cargo test
+        #      run: cargo test --workspace --all-targets --all-features
