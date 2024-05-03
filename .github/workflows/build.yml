@@ -3,6 +3,10 @@ name: "Check"
 permissions:
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 on:
   workflow_dispatch:
   workflow_call:
@@ -26,23 +30,21 @@ jobs:
           toolchain: nightly
           components: rustfmt
 
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          toolchain: stable
-          components: clippy
-
       - name: Rustfmt Check
         run: cargo +nightly fmt --all --check
 
   cargo-clippy:
     name: Cargo clippy
     runs-on: ubuntu-latest
-    needs: cargo-fmt
 
     steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          components: clippy
 
       - name: Clippy Check
         run: cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
@@ -50,11 +52,13 @@ jobs:
   cargo-test:
     name: Cargo test
     runs-on: ubuntu-latest
-    needs: cargo-clippy
 
     steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - name: Cargo test
         run: cargo test --workspace --all-targets --all-features
