@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Clippy Check
-        run: ls -la && cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
+        run: cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
 
         #cargo-test:
         #  name: Cargo test
