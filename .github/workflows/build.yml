@@ -37,7 +37,6 @@ jobs:
 
   cargo-clippy:
     name: Cargo clippy
-    runs-on: ubuntu-latest
     needs: cargo-fmt
 
     steps:
@@ -46,7 +45,6 @@ jobs:
 
   cargo-test:
     name: Cargo test
-    runs-on: ubuntu-latest
     needs: cargo-clippy
 
     steps:
