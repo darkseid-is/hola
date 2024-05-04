@@ -10,9 +10,5 @@ Note: In this file, do not use the hard wrap in the middle of a sentence for com
 
 ## [Unreleased]
 
-
-## [0.0.2] - 2024-04-10
-- Secondary release
-
 ## [0.0.1] - 2024-04-10
 - Initial release
