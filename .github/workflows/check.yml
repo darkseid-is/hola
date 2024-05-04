@@ -11,9 +11,9 @@ on:
   workflow_dispatch:
   workflow_call:
   pull_request:
-  push:
-    branches:
-      - main
+    #push:
+    #  branches:
+    #    - main
 
 jobs:
   cargo-fmt:
