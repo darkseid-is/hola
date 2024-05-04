@@ -10,7 +10,8 @@ on:
 
 jobs:
   tests:
-    uses: ./.github/workflows/check.yml  # use the callable tests job to run tests
+    # use the callable tests job to run tests
+    uses: ./.github/workflows/check.yml
 
   create-release:
     runs-on: ubuntu-latest
