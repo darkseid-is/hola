@@ -1,7 +1,7 @@
 name: Release
 on:
   workflow_run:
-    workflows: ["build"]
+    workflows: ["Check"]
     branches: [main]
     types: 
       - completed
