@@ -3,7 +3,7 @@ fn main() {
     println!("Hello, world!");
 }
 
-fn sub(a: i32, b: i32) -> i32 {
+fn sub(a: i8, b: i8) -> i8 {
     a - b
 }
 
