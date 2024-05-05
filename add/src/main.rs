@@ -3,7 +3,7 @@ fn main() {
     println!("Hello, world!");
 }
 
-fn add(a: i32, b: i32) -> i32 {
+fn add(a: u32, b: u32) -> u32 {
     a + b
 }
 
