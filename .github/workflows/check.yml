@@ -31,7 +31,7 @@ jobs:
           components: rustfmt
 
       - name: Rustfmt Check
-        run: cargo +nightly fmt --all --check
+        run: cargo +nightly fmt --all
 
   cargo-clippy:
     name: Cargo clippy

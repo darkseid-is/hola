@@ -3,8 +3,9 @@ fn main() {
     println!("From wick");
 }
 
-fn add(a: u64, b: u64) -> u64 { a + b }
-
+fn add(a: u64, b: u64) -> u64 {
+    a + b
+}
 #[cfg(test)]
 mod tests {
     use super::*;
