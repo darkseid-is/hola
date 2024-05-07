@@ -1,10 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-<<<<<<< HEAD
     println!("Golka, worlds!");
-=======
-    println!("Hola, world!");
->>>>>>> feature
 }
 
 fn add(a: u64, b: u64) -> u64 {
