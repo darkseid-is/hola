@@ -1,9 +1,9 @@
 #![allow(dead_code)]
 fn main() {
 <<<<<<< HEAD
-    println!("Main sub");
+    println!(" Main sub");
 =======
-    println!("Feature main");
+    println!("Feature sub main");
 >>>>>>> feature
 }
 

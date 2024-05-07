@@ -1,9 +1,9 @@
 #![allow(dead_code)]
 fn main() {
 <<<<<<< HEAD
-    println!("Modded Main!");
+    println!("Main add Main!");
 =======
-    println!("Feature ");
+    println!("Feature add ");
 >>>>>>> feature
 }
 
