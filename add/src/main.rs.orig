@@ -1,13 +1,13 @@
 #![allow(dead_code)]
 fn main() {
-    println!("Feature, world!");
+<<<<<<< HEAD
+    println!("Main world!");
+=======
+    println!("Features, world!");
+>>>>>>> feature
 }
 
-<<<<<<< HEAD
 fn add(a: u64, b: u64) -> u64 {
-=======
-fn add(a: i32, b: i32) -> i32 {
->>>>>>> c0dcde90b6a3d70d1dc416845dc0a1dcba7e30dc
     a + b
 }
 
