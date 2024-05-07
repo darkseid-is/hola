@@ -1,10 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-<<<<<<< HEAD
-    println!("Modded Main!");
-=======
-    println!("Feature ");
->>>>>>> feature
+    println!("Main add Main!");
 }
 
 fn add(a: u64, b: u64) -> u64 {

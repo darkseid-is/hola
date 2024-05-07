@@ -1,10 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-<<<<<<< HEAD
-    println!("Main sub");
-=======
-    println!("Feature main");
->>>>>>> feature
+    println!(" Main sub");
 }
 
 fn sub(a: i32, b: i32) -> i32 {
