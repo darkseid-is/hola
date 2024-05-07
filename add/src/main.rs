@@ -1,6 +1,5 @@
 #![allow(dead_code)]
 fn main() {
-    println!("Golka, worlds!");
 }
 
 fn add(a: u64, b: u64) -> u64 {
