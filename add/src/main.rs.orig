@@ -1,9 +1,9 @@
 #![allow(dead_code)]
 fn main() {
 <<<<<<< HEAD
-    println!("Main world!");
+    println!("Hola world!");
 =======
-    println!("Features, world!");
+    println!("Feature world!");
 >>>>>>> feature
 }
 
