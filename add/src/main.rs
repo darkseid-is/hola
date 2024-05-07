@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-    println!("Hobo, world!");
+    println!("Hola, world!");
 }
 
 fn add(a: u64, b: u64) -> u64 {
