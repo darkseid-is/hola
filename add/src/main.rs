@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-    println!("Feature add ");
+    println!("Feature branch ");
 }
 
 fn add(a: u64, b: u64) -> u64 {
