@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-    println!("Hello, world!");
+    println!("Feature main");
 }
 
 fn sub(a: i32, b: i32) -> i32 {
