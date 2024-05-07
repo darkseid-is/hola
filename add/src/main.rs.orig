@@ -1,10 +1,10 @@
 #![allow(dead_code)]
 fn main() {
 <<<<<<< HEAD
-    println!("Hola world!");
+    println!("Main world!");
 =======
-    println!("Feature world!");
->>>>>>> feature
+    println!("From wick world!");
+>>>>>>> wickjn/main
 }
 
 fn add(a: u64, b: u64) -> u64 {
