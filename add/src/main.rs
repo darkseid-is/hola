@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-    println!("Hello, world!");
+    println!("Golka, world!");
 }
 
 fn add(a: u16, b: u16) -> u16 {
