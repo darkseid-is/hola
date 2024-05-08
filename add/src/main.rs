@@ -1,7 +1,6 @@
 #![allow(dead_code)]
 fn main() {
-    println!("From wick");
-    println!("Feature");
+    println!("From Feature");
 }
 
 fn add(a: u64, b: u64) -> u64 {
