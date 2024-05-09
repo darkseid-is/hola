@@ -1,19 +1,32 @@
-name: Clean Cache
+name: "Cache"
 
 permissions:
-  actions: write
+  contents: write
 
-on:
-  workflow_dispatch:
+job:
+  name: "Cache"
+  runs-on: ubuntu-latest
 
-jobs:
-  clean-cache:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Fetch Repository
-        uses: actions/checkout@v4
+  steps:
+    - name: Caching
+      uses: Swatinem/rust-cache@v2
+      with:
+        # Determines which crates are cached.
+        # If `true` all crates will be cached, otherwise only dependent crates will be cached.
+        # Useful if additional crates are used for CI tooling.
+        # default: "false"
+        cache-all-crates: true
 
-      - name: Clean
-        run: gh cache delete --all
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Determiners whether the cache should be saved.
+        # If `false`, the cache is only restored.
+        # Useful for jobs where the matrix is additive e.g. additional Cargo features,
+        # or when only runs from `master` should be saved to the cache.
+        # default: "true"
+        # save-if: ""
+        # To only cache runs from `master`:
+      save-if: ${{ github.ref == 'refs/heads/master' }}
+
+      # Specifies what to use as the backend providing cache
+      # Can be set to either "github" or "buildjet"
+      # default: "github"
+      cache-provider: "github"

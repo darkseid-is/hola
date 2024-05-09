@@ -1,0 +1,19 @@
+name: Clean Cache
+
+permissions:
+  actions: write
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Clean
+        run: gh cache delete --all
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
