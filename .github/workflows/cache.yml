@@ -6,7 +6,7 @@ permissions:
 on:
   workflow_dispatch:
 
-job:
+jobs:
   name: "Cache"
   runs-on: ubuntu-latest
 
