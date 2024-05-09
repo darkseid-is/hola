@@ -34,8 +34,8 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           cache-all-crates: true
-        save-if: ${{ github.ref == 'refs/heads/master' }}
-        cache-provider: "github"
+          save-if: ${{ github.ref == 'refs/heads/master' }}
+          cache-provider: "github"
 
       - name: Rustfmt Check
         run: cargo +nightly fmt --all --check
@@ -57,8 +57,8 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           cache-all-crates: true
-        save-if: ${{ github.ref == 'refs/heads/master' }}
-        cache-provider: "github"
+          save-if: ${{ github.ref == 'refs/heads/master' }}
+          cache-provider: "github"
 
       - name: Clippy Check
         run: cargo clippy --workspace --all-targets --all-features -- -Dwarnings 
@@ -78,8 +78,8 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           cache-all-crates: true
-        save-if: ${{ github.ref == 'refs/heads/master' }}
-        cache-provider: "github"
+          save-if: ${{ github.ref == 'refs/heads/master' }}
+          cache-provider: "github"
 
       - name: Cargo test
         run: cargo test --workspace --all-targets --all-features
