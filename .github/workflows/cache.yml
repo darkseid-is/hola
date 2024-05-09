@@ -3,6 +3,9 @@ name: "Cache"
 permissions:
   contents: write
 
+on:
+  workflow_dispatch:
+
 job:
   name: "Cache"
   runs-on: ubuntu-latest
