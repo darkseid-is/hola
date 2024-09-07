@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     tags:
-      - alpha-v[0-9]+.*
+      - alpha**
 
 jobs:
   tests:
