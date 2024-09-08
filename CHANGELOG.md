@@ -12,3 +12,7 @@ Note: In this file, do not use the hard wrap in the middle of a sentence for com
 
 ## [0.0.1] - 2024-04-10
 - Initial release
+
+## [0.0.2] - 2024-09-08
+- Added add
+- Added sub
