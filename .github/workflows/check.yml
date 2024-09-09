@@ -33,6 +33,9 @@ jobs:
       - name: Caching
         uses: Swatinem/rust-cache@v2
         with:
+          prefix-key: "prefix"
+          shared-key: "shared"
+          key: "key"
           cache-all-crates: true
           save-if: ${{ github.ref == 'refs/heads/master' }}
           cache-provider: "github"
@@ -56,6 +59,9 @@ jobs:
       - name: Caching
         uses: Swatinem/rust-cache@v2
         with:
+          prefix-key: "prefix"
+          shared-key: "shared"
+          key: "key"
           cache-all-crates: true
           save-if: ${{ github.ref == 'refs/heads/master' }}
           cache-provider: "github"
@@ -77,6 +83,9 @@ jobs:
       - name: Caching
         uses: Swatinem/rust-cache@v2
         with:
+          prefix-key: "prefix"
+          shared-key: "shared"
+          key: "key"
           cache-all-crates: true
           save-if: ${{ github.ref == 'refs/heads/master' }}
           cache-provider: "github"
