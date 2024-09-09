@@ -37,7 +37,6 @@ jobs:
           shared-key: "shared"
           key: "key"
           cache-all-crates: true
-          save-if: ${{ github.ref == 'refs/heads/master' }}
           cache-provider: "github"
 
       - name: Rustfmt Check
@@ -63,7 +62,6 @@ jobs:
           shared-key: "shared"
           key: "key"
           cache-all-crates: true
-          save-if: ${{ github.ref == 'refs/heads/master' }}
           cache-provider: "github"
 
       - name: Clippy Check
@@ -87,7 +85,6 @@ jobs:
           shared-key: "shared"
           key: "key"
           cache-all-crates: true
-          save-if: ${{ github.ref == 'refs/heads/master' }}
           cache-provider: "github"
 
       - name: Cargo test
