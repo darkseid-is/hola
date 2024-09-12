@@ -4,7 +4,7 @@ fn main() {
 }
 
 fn add(a: u64, b: u64) -> u64 {
-    b + a
+    a + b
 }
 
 // Tests
